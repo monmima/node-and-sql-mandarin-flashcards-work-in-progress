@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Chinese Flashcards</title>
+
+    <style>
+        dfn {
+            font-style: normal;
+            border-bottom: 1px dotted gray;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2, h3, h4 {
+            background-color: black;
+            color: white;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+    <h1>Easy Chinese Flashcards</h1>
+
+    <h2>Create</h2>
+
+    <!--for a more complex form, please consider the possibility of using the <legend> and <fieldset> tags-->
+    <form name="form-create-data" id="form-create-data" method="POST" action="/add-post-form">
+        <p><label for="title">Post title:</label></p>
+        <p><input type="text" name="title" id="title" required></p>
+        
+        <p><label for="body">Post body:</label></p>
+        <p><input type="text" name="body" id="body" required></p>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <ul>
+        <li><a href="/add-post-1" title="add-post-1">add one item</a></li>
+        <li><a href="/add-post-2" title="add-post-2">add another item</a></li>
+    </ul>
+
+    <h2>Read</h2>
+    <ul>
+        <li><a href="/get-posts" title="get-posts">get-posts</a></li>
+    </ul>
+
+    <h2>Update</h2>
+    <ul>
+        <li><a href="/update-posts" title="update-posts">update-posts</a></li>
+    </ul>
+
+    <h2>Delete</h2>
+    <ul>
+        <li><a href="/delete-posts" title="delete-posts">delete-posts</a></li>
+    </ul>
+
+    <h2>.ejs files</h2>
+
+    <p>The page that you are currently reading is an HTML file. If you wanted to replace this index.html file by an index.ejs file, you would need to:</p>
+
+    <ol>
+        <li>Delete the index.html file</li>
+        <li>Create a file with the name index.ejs in the views folder</li>
+        <li>Make sure the route "/" is taken into account in the app.js file</li>
+    </ol>
+
+    <p>EJS examples</p>
+
+    <ul>
+        <li><a title='EJS Example 1: NO Templating AND NO MySQL' href="ejs-1">EJS Example 1: NO templating AND NO MySQL</a></li>
+        <li><a title='EJS Example 2: Templating BUT NO MySQL' href="ejs-2">EJS Example 2: Templating BUT NO MySQL</a></li>
+        <li><a title='EJS Example 3: Templating AND MySQL' href="ejs-3">EJS Example 3: Templating AND MySQL</a></li>
+    </ul>
+
+</body>
+</html>
